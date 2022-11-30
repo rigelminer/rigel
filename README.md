@@ -222,3 +222,7 @@ Currently there is no developer fee, but it will be added in one of the future r
   -V, --version
           Print version information
 ```
+
+## Support
+Discord: https://discord.gg/zKTgcGgc6k  
+BitcoinTalk: https://bitcointalk.org/index.php?topic=5424675.0  
