@@ -17,5 +17,7 @@ Currently there is no developer fee, but it will be added in one of the future r
 * Terminal user interface
 * Temperature, clocks, fan monitoring
 * Built-in GPU overclocking support with an option to apply different settings for ZIL
-* Temperature and auto-fan control
+* Temperature limits and fan control
 * HTTP API
+
+![rigel](https://user-images.githubusercontent.com/119491468/204774245-a26bcf43-247f-40ee-8aee-b49982aeac69.png)
