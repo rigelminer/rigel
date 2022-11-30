@@ -17,6 +17,7 @@ Currently there is no developer fee, but it will be added in one of the future r
 ## Features
 * Available on Linux and Windows
 * Terminal user interface
+* Failover pool support
 * Temperature, clocks, fan monitoring
 * Built-in GPU overclocking support with an option to apply different settings for ZIL
 * Temperature limits and fan control
