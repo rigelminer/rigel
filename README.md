@@ -1,7 +1,7 @@
 # Rigel
 This is a cryptocurrency miner for Nvidia GPUs
 
-![rigel](https://user-images.githubusercontent.com/119491468/204774245-a26bcf43-247f-40ee-8aee-b49982aeac69.png)
+![rigel screenshot kaspa](https://user-images.githubusercontent.com/119491468/204991320-802a9de8-8a77-4527-b802-846d542eb05e.png)
 
 ## Supported algorithms
 * ethash (Ethereum PoW, Zilliqa)
