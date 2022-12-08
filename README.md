@@ -54,8 +54,14 @@ Currently there is no developer fee, but it will be added in one of the future r
           -o [1]stratum+tcp://eth.f2pool.com:6688 -o [2]stratum+ssl://pool.woolypooly.com:3112
               mine the primary algorithm to f2pool and the second algorithm to woolypooly
 
-  -u, --user <USER>
+  -u, --username <USERNAME>
           Sets the username for pool authorisation
+          
+          When dual or triple mining the value should be prepended with
+          the algorithm index `[<index>]`. Primary algorithm has index 1.
+
+  -p, --password <PASSWORD>
+          Sets the password for pool authorisation
           
           When dual or triple mining the value should be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
@@ -125,6 +131,9 @@ Currently there is no developer fee, but it will be added in one of the future r
 
       --cpu-check
           Enables CPU verification of found shares before sending them to the pool
+
+      --hashrate-avg <SECONDS>
+          Hashrate averaging window in seconds. Default is 10.
 
       --cclock <FREQ1,FREQ2,...>
           Sets GPU core clock frequency offset in MHz
@@ -206,6 +215,9 @@ Currently there is no developer fee, but it will be added in one of the future r
           Examples:
           --api-bind 127.0.0.1:5000
           --api-bind 0.0.0.0:5000
+
+      --dns-over-https
+          Enables pool DNS resolution using DNS-over-HTTPS (Cloudflare)
 
       --long-timestamps
           Enables milliseconds timestamps in the miner output
