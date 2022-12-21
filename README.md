@@ -4,12 +4,13 @@ This is a cryptocurrency miner for Nvidia GPUs
 ![rigel screenshot kaspa](https://user-images.githubusercontent.com/119491468/204991320-802a9de8-8a77-4527-b802-846d542eb05e.png)
 
 ## Supported algorithms
-* ethash (Ethereum PoW, Zilliqa)
+* ethash (Ethereum PoW)
 * etchash (Ethereum Classic)
+* zil (Zilliqa)
 * kheavyhash (Kaspa)
 * ethash+kheavyhash
 * etchash+kheavyhash
-* any single or dual algorithm combination + ZIL
+* any single or dual algorithm combination + zil
 
 ## Developer fee
 | Algorithm   | Fee  |
