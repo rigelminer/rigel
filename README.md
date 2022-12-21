@@ -12,7 +12,12 @@ This is a cryptocurrency miner for Nvidia GPUs
 * any single or dual algorithm combination + ZIL
 
 ## Developer fee
-Currently there is no developer fee, but it will be added in one of the future releases
+| Algorithm   | Fee  |
+| ----------- | -----|
+| ethash      | 0.7% |
+| etchash     | 0.7% |
+| zil         | 0%   |
+| kheavyhash  | 0.7% |
 
 ## Features
 * Available on Linux and Windows
@@ -40,7 +45,7 @@ Currently there is no developer fee, but it will be added in one of the future r
           Format:
           <mining protocol>+<transport protocol>://<pool hostname>:<port number>
           
-          Mining protocols:    stratum, ethproxy, zmp (zil only)
+          Mining protocols:    stratum, ethproxy, ethstratum, zmp (zil only)
           Transport protocols: tcp, ssl
           
           When dual or triple mining the value should be prepended with
