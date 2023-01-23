@@ -8,6 +8,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * etchash (Ethereum Classic)
 * zil (Zilliqa)
 * kheavyhash (Kaspa)
+* nexapow (Nexa)
 * ethash+kheavyhash
 * etchash+kheavyhash
 * any single or dual algorithm combination + zil
@@ -19,6 +20,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | etchash     | 0.7% |
 | zil         | 0%   |
 | kheavyhash  | 0.7% |
+| nexapow     | 2.0% |
 
 ## Features
 * Available on Linux and Windows
@@ -38,6 +40,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           etchash     (ETC)
           ethash      (ETHW)
           kheavyhash  (Kaspa)
+          nexapow     (Nexa)
           zil         (Zilliqa)
 
   -o, --url <URL>
@@ -181,6 +184,16 @@ This is a cryptocurrency miner for Nvidia GPUs
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
+      --mt <MT1,MT2,...>
+          Set memory tweaks for Pascal GPUs with GDDR5/GDDR5X memory
+          
+          Possible values: 1, 2, 3, 4, 5, 6 (REFRESH will be set to `mt * 16`)
+          
+          Comma-separated list of values can be used to set values per-GPU
+          To skip a GPU, set the corresponding value to underscore `_`
+          When dual or triple mining the value may be prepended with
+          the algorithm index `[<index>]`. Primary algorithm has index 1.
+
       --fan-control <FAN1,FAN2,...>
           Sets GPU fan control mode
           
@@ -243,4 +256,4 @@ This is a cryptocurrency miner for Nvidia GPUs
 
 ## Support
 Discord: https://discord.gg/zKTgcGgc6k  
-BitcoinTalk: https://bitcointalk.org/index.php?topic=5424675.0  
+BitcoinTalk: https://bitcointalk.org/index.php?topic=5424675.0
