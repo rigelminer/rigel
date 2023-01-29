@@ -238,6 +238,14 @@ This is a cryptocurrency miner for Nvidia GPUs
       --dns-over-https
           Enables pool DNS resolution using DNS-over-HTTPS (Cloudflare)
 
+      --no-strict-ssl
+          Disables SSL/TLS certificate verification
+          
+          Useful with self-hosted mining solutions where the mining pool
+          provides a self-signed certificate.
+          However, adding the certificate to the system's trust store
+          should be preferred.
+
       --long-timestamps
           Enables milliseconds timestamps in the miner output
 
