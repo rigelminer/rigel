@@ -164,6 +164,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Locks GPU core clock frequency to the given value in MHz
           
           Comma-separated list of values can be used to set values per-GPU
+          Set to `X` to reset the locked clock (unlock)
           To skip a GPU, set the corresponding value to underscore `_`
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
@@ -172,6 +173,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Locks GPU memory clock frequency to the given value in MHz
           
           Comma-separated list of values can be used to set values per-GPU
+          Set to `X` to reset the locked clock (unlock)
           To skip a GPU, set the corresponding value to underscore `_`
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
