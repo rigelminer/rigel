@@ -95,6 +95,32 @@ This is a cryptocurrency miner for Nvidia GPUs
       --list-devices
           List available mining devices and exit
 
+      --kernel <KERNEL1,KERNEL2,...>
+          Sets CUDA kernel for selected algorithm(s)
+          
+          Some algorithms have multiple implementations with different characteristics,
+          for example, one may be more energy efficient and another can achieve
+          higher hashrate at a cost of increased power consumption. In such cases
+          the user can choose the implementation that suits their requirements.
+          
+          Supported algorithms and values:
+          nexapow
+              1 - default kernel for RTX 40xx series
+              2 - default kernel for GTX 10xx series
+                  some 20xx and 30xx GPUs may benefit from choosing this kernel
+                  as more energy efficient than #3
+              3 - default kernel for RTX 20xx and 30xx series (high power consumption)
+          
+          Comma-separated list of values can be used to set values per-GPU
+          To skip a GPU, set the corresponding value to underscore `_`
+          When dual or triple mining the value may be prepended with
+          the algorithm index `[<index>]`. Primary algorithm has index 1.
+          
+          Example:
+          --kernel _,_,2,2
+              GPU#0 and GPU#1 will use their respective default kernels
+              GPU#1 and GPU#2 will use kernel #2
+
       --dual-mode <MODE1,MODE2,...>
           Controls GPU behaviour in dual mining mode
           
@@ -179,7 +205,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
       --pl <PL1,PL2,...>
-          Set GPU power limit to the given value in Watts
+          Sets GPU power limit to the given value in Watts
           
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`
@@ -187,7 +213,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
       --mt <MT1,MT2,...>
-          Set memory tweaks for Pascal GPUs with GDDR5/GDDR5X memory
+          Sets memory tweaks for Pascal GPUs with GDDR5/GDDR5X memory
           
           Possible values: 1, 2, 3, 4, 5, 6 (REFRESH will be set to `mt * 16`)
           
