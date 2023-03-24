@@ -105,9 +105,8 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           Supported algorithms and values:
           nexapow
-              1 - default kernel for RTX 40xx series
-              2 - default kernel for GTX 10xx series
-                  some 20xx and 30xx GPUs may benefit from choosing this kernel
+              1 - default kernel for GTX 10xx and RTX 40xx series
+              2 - some 20xx and 30xx GPUs may benefit from choosing this kernel
                   as more energy efficient than #3
               3 - default kernel for RTX 20xx and 30xx series (high power consumption)
           
