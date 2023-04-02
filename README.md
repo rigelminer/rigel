@@ -105,10 +105,10 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           Supported algorithms and values:
           nexapow
-              1 - default kernel for GTX 10xx and RTX 40xx series
+              1 - default kernel
               2 - some 20xx and 30xx GPUs may benefit from choosing this kernel
-                  as more energy efficient than #3
-              3 - default kernel for RTX 20xx and 30xx series (high power consumption)
+                  as more energy efficient than #1 when you're after really low
+                  power consumption
           
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`
@@ -168,6 +168,9 @@ This is a cryptocurrency miner for Nvidia GPUs
 
       --hashrate-avg <SECONDS>
           Hashrate averaging window in seconds. Default is 10.
+
+      --power-avg <SECONDS>
+          Power usage averaging window in seconds. Default is 10.
 
       --cclock <FREQ1,FREQ2,...>
           Sets GPU core clock frequency offset in MHz
