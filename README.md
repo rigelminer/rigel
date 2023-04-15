@@ -4,20 +4,33 @@ This is a cryptocurrency miner for Nvidia GPUs
 ![rigel screenshot kaspa](https://user-images.githubusercontent.com/119491468/204991320-802a9de8-8a77-4527-b802-846d542eb05e.png)
 
 ## Supported algorithms
+* alephium (Alephium)
 * ethash (Ethereum PoW)
 * etchash (Ethereum Classic)
+* ironfish (Iron Fish)
+* octa (Octa.Space)
 * zil (Zilliqa)
 * kheavyhash (Kaspa)
 * nexapow (Nexa)
 * ethash+kheavyhash
 * etchash+kheavyhash
+* octa+kheavyhash
+* ethash+alephium
+* etchash+alephium
+* octa+alephium
+* ethash+ironfish
+* etchash+ironfish
+* octa+ironfish
 * any single or dual algorithm combination + zil
 
 ## Developer fee
 | Algorithm   | Fee  |
 | ----------- | -----|
+| alephium    | 0.7% |
 | ethash      | 0.7% |
 | etchash     | 0.7% |
+| ironfish    | 0.7% |
+| octa        | 0.7% |
 | zil         | 0%   |
 | kheavyhash  | 0.7% |
 | nexapow     | 2.0% |
@@ -37,8 +50,11 @@ This is a cryptocurrency miner for Nvidia GPUs
           Selects the mining algorithm
           
           Currently supported:
+          alephium    (ALPH)
           etchash     (ETC)
           ethash      (ETHW)
+          ironfish    (IRON)
+          octa        (OCTA)
           kheavyhash  (Kaspa)
           nexapow     (Nexa)
           zil         (Zilliqa)
@@ -275,6 +291,10 @@ This is a cryptocurrency miner for Nvidia GPUs
           provides a self-signed certificate.
           However, adding the certificate to the system's trust store
           should be preferred.
+
+      --stats-interval <SECONDS>
+          GPU stats reporting interval in seconds. Default is 20.
+          Set to `X` to disable periodic reports.
 
       --long-timestamps
           Enables milliseconds timestamps in the miner output
