@@ -9,6 +9,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * etchash (Ethereum Classic)
 * ironfish (Iron Fish)
 * octa (Octa.Space)
+* flora (Flora)
 * zil (Zilliqa)
 * kheavyhash (Kaspa)
 * nexapow (Nexa)
@@ -31,6 +32,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | etchash     | 0.7% |
 | ironfish    | 0.7% |
 | octa        | 0.7% |
+| flora       | 0.7% |
 | zil         | 0%   |
 | kheavyhash  | 0.7% |
 | nexapow     | 2.0% |
@@ -55,6 +57,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           ethash      (ETHW)
           ironfish    (IRON)
           octa        (OCTA)
+          flora       (FLORA)
           kheavyhash  (Kaspa)
           nexapow     (Nexa)
           zil         (Zilliqa)
@@ -270,6 +273,9 @@ This is a cryptocurrency miner for Nvidia GPUs
           --fan-control t:[70;100][_;_-_]
               adjust fan so that core temperature <= 70, memory temperature <= 100,
               with no restrictions on the fan speed
+
+      --zil-countdown
+          Enables Zilliqa countdown timer
 
   -l, --log-file <LOG_FILE>
           Enables logging output of the miner to the specified log file
