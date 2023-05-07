@@ -280,6 +280,9 @@ This is a cryptocurrency miner for Nvidia GPUs
   -l, --log-file <LOG_FILE>
           Enables logging output of the miner to the specified log file
 
+      --log-network
+          Enables logging network traffic (useful for debugging)
+
       --api-bind <IP:PORT>
           Enables HTTP API and binds it to the specified socket address
           
