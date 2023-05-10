@@ -277,6 +277,15 @@ This is a cryptocurrency miner for Nvidia GPUs
       --zil-countdown
           Enables Zilliqa countdown timer
 
+      --zil-test
+          Enables Zilliqa mining test mode
+          
+          In this mode the miner will connect to a virtual Zilliqa pool which initiates
+          short ZIL mining sessions more frequently than a normal pool (every 30s).
+          Useful for making sure the overclock settings are stable when switching
+          from the primary algorithm to `zil` and back - no need to wait for the next
+          ZIL window which may start in an hour.
+
   -l, --log-file <LOG_FILE>
           Enables logging output of the miner to the specified log file
 
