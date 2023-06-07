@@ -8,6 +8,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * ethash (Ethereum PoW)
 * etchash (Ethereum Classic)
 * ironfish (Iron Fish)
+* sha512256d (Radiant)
 * octa (Octa.Space)
 * flora (Flora)
 * zil (Zilliqa)
@@ -31,6 +32,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | ethash      | 0.7% |
 | etchash     | 0.7% |
 | ironfish    | 0.7% |
+| sha512256d  | 1.0% |
 | octa        | 0.7% |
 | flora       | 0.7% |
 | zil         | 0%   |
@@ -56,11 +58,24 @@ This is a cryptocurrency miner for Nvidia GPUs
           etchash     (ETC)
           ethash      (ETHW)
           ironfish    (IRON)
+          sha512256d  (RXD)
           octa        (OCTA)
           flora       (FLORA)
           kheavyhash  (Kaspa)
           nexapow     (Nexa)
           zil         (Zilliqa)
+          
+          To dual or triple mine pass the algorithm list
+          separated by `+`, e.g. `octa+kheavyhash+zil`
+
+      --a1 <ALGORITHM>
+          Sets the primary algorithm (alternative to `-a`)
+
+      --a2 <ALGORITHM>
+          Sets the second algorithm (alternative to `-a`)
+
+      --a3 <ALGORITHM>
+          Sets the third algorithm (alternative to `-a`)
 
   -o, --url <URL>
           Sets the pool URL
@@ -130,7 +145,7 @@ This is a cryptocurrency miner for Nvidia GPUs
                   power consumption
           
           Comma-separated list of values can be used to set values per-GPU
-          To skip a GPU, set the corresponding value to underscore `_`
+          To skip a GPU, set the corresponding value to underscore `_`.
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
           
@@ -195,7 +210,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Sets GPU core clock frequency offset in MHz
           
           Comma-separated list of values can be used to set values per-GPU
-          To skip a GPU, set the corresponding value to underscore `_`
+          To skip a GPU, set the corresponding value to underscore `_`.
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
@@ -203,7 +218,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Sets GPU memory clock frequency offset in MHz
           
           Comma-separated list of values can be used to set values per-GPU
-          To skip a GPU, set the corresponding value to underscore `_`
+          To skip a GPU, set the corresponding value to underscore `_`.
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
@@ -212,7 +227,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           Comma-separated list of values can be used to set values per-GPU
           Set to `X` to reset the locked clock (unlock)
-          To skip a GPU, set the corresponding value to underscore `_`
+          To skip a GPU, set the corresponding value to underscore `_`.
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
@@ -221,7 +236,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           Comma-separated list of values can be used to set values per-GPU
           Set to `X` to reset the locked clock (unlock)
-          To skip a GPU, set the corresponding value to underscore `_`
+          To skip a GPU, set the corresponding value to underscore `_`.
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
@@ -229,7 +244,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Sets GPU power limit to the given value in Watts
           
           Comma-separated list of values can be used to set values per-GPU
-          To skip a GPU, set the corresponding value to underscore `_`
+          To skip a GPU, set the corresponding value to underscore `_`.
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
@@ -239,7 +254,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Possible values: 1, 2, 3, 4, 5, 6 (REFRESH will be set to `mt * 16`)
           
           Comma-separated list of values can be used to set values per-GPU
-          To skip a GPU, set the corresponding value to underscore `_`
+          To skip a GPU, set the corresponding value to underscore `_`.
           When dual or triple mining the value may be prepended with
           the algorithm index `[<index>]`. Primary algorithm has index 1.
 
@@ -261,7 +276,9 @@ This is a cryptocurrency miner for Nvidia GPUs
                   meaning the default value should be used.
           
           Comma-separated list of values can be used to set values per-GPU
-          To skip a GPU, set the corresponding value to underscore `_`
+          To skip a GPU, set the corresponding value to underscore `_`.
+          When dual or triple mining the value may be prepended with
+          the algorithm index `[<index>]`. Primary algorithm has index 1.
           
           Examples:
           --fan-control 30
