@@ -54,15 +54,15 @@ This is a cryptocurrency miner for Nvidia GPUs
           Selects the mining algorithm
           
           Currently supported:
-          alephium    (ALPH)
-          etchash     (ETC)
-          ethash      (ETHW)
-          ironfish    (IRON)
-          sha512256d  (RXD)
-          octa        (OCTA)
-          flora       (FLORA)
+          alephium    (Alephium)
+          etchash     (Ethereum Classic)
+          ethash      (Ethereum PoW)
+          flora       (Flora)
+          ironfish    (Iron Fish)
           kheavyhash  (Kaspa)
           nexapow     (Nexa)
+          octa        (Octa.Space)
+          sha512256d  (Radiant)
           zil         (Zilliqa)
           
           To dual or triple mine pass the algorithm list
@@ -92,8 +92,8 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           Examples:
           -o stratum+ssl://pool.woolypooly.com:3112
-          -o zmp+tcp://zil.flexpool.io:9486
-              mine Zilliqa to flexpool using ZMP protocol
+          -o zmp+tcp://us1-zil.shardpool.io:3333
+              mine Zilliqa to shardpool using ZMP protocol
           -o [1]stratum+tcp://eth.f2pool.com:6688 -o [2]stratum+ssl://pool.woolypooly.com:3112
               mine the primary algorithm to f2pool and the second algorithm to woolypooly
 
