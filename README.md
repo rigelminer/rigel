@@ -5,6 +5,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 
 ## Supported algorithms
 * alephium (Alephium)
+* autolykos2 (Ergo)
 * ethash (Ethereum PoW)
 * etchash (Ethereum Classic)
 * ironfish (Iron Fish)
@@ -23,21 +24,23 @@ This is a cryptocurrency miner for Nvidia GPUs
 * ethash+ironfish
 * etchash+ironfish
 * octa+ironfish
+* autolykos2+sha512256d
 * any single or dual algorithm combination + zil
 
 ## Developer fee
-| Algorithm   | Fee  |
-| ----------- | -----|
-| alephium    | 0.7% |
-| ethash      | 0.7% |
-| etchash     | 0.7% |
-| ironfish    | 0.7% |
-| sha512256d  | 1.0% |
-| octa        | 0.7% |
-| flora       | 0.7% |
-| zil         | 0%   |
-| kheavyhash  | 0.7% |
-| nexapow     | 2.0% |
+| Algorithm  | Fee  |
+|------------|------|
+| alephium   | 0.7% |
+| autolykos2 | 1.0% |
+| ethash     | 0.7% |
+| etchash    | 0.7% |
+| ironfish   | 0.7% |
+| sha512256d | 1.0% |
+| octa       | 0.7% |
+| flora      | 0.7% |
+| zil        | 0%   |
+| kheavyhash | 0.7% |
+| nexapow    | 2.0% |
 
 ## Features
 * Available on Linux and Windows
@@ -164,17 +167,20 @@ This is a cryptocurrency miner for Nvidia GPUs
               a12 - both
           
           `<dual ratio>` is optional, and, if present,
-          must be `rXX` (`dual ratio` coefficient set to `XX`)
+          must be
+          `rXX` (`dual ratio` coefficient set to `XX`), or
+          `hXX` (first algorithm hashrate will drop to `XX`%)
           
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`
           
           Examples:
-          --dual-mode a1,_,a12:r5,a2
+          --dual-mode a1,_,a12:r5.2,a12:h92,a2
               GPU#0 will mine the primary algorithm
-              GPU#1 will dual mine with default settings
-              GPU#1 will dual mine, dual ratio set to 5
-              GPU#2 will mine the second algorithm
+              GPU#1 will dual mine with default settings (primary algorithm at 95%)
+              GPU#2 will dual mine, dual ratio set to 5.2
+              GPU#3 will dual mine, primary algorithm hashrate at 92%
+              GPU#4 will mine the second algorithm
 
       --temp-limit <LIMIT1,LIMIT2,...>
           Sets GPU thermal limits
@@ -268,7 +274,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Format:
               --fan-control N
                   set fan speed to `N`%
-              --fan-control t:[Tc,Tm][Finit;Fmin-Fmax]
+              --fan-control t:[Tc;Tm][Finit;Fmin-Fmax]
                   enables auto-fan with `Tc` and `Tm` core and memory temperatures
                   respectively, set initial fan speed to `Finit`% and limit the
                   fan speed range to [`Fmin`%,`Fmax`%] range.
@@ -302,6 +308,21 @@ This is a cryptocurrency miner for Nvidia GPUs
           Useful for making sure the overclock settings are stable when switching
           from the primary algorithm to `zil` and back - no need to wait for the next
           ZIL window which may start in an hour.
+
+      --zil-test-intervals <ZIL_TEST_INTERVALS>
+          Sets durations of primary algorithm and Zilliqa sessions in test mode
+          
+          Default value: `[30;30]`
+          
+          Format:
+              --zil-test-intervals [D1;D2]
+                  set primary algo duration to `D1` seconds
+                  set ZIL duration to `D2` seconds
+          
+          Example:
+          --zil-test-intervals [10;60]
+              the miner will mine the primary algorithm for 10 seconds, switch to ZIL,
+              mine ZIL for 60 seconds, switch back, and so on
 
   -l, --log-file <LOG_FILE>
           Enables logging output of the miner to the specified log file
