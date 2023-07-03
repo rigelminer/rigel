@@ -182,8 +182,6 @@ This is a cryptocurrency miner for Nvidia GPUs
               GPU#2 will dual mine, dual ratio set to 5.2
               GPU#3 will dual mine, primary algorithm hashrate at 92%
               GPU#4 will mine the second algorithm
-          
-          [default: ]
 
       --temp-limit <LIMIT1,LIMIT2,...>
           Sets GPU thermal limits
@@ -205,8 +203,6 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           --temp-limit tc[60-70]tm[105-115]
               enables both core and memory temperature limits
-          
-          [default: ]
 
       --cpu-check
           Enables CPU verification of found shares before sending them to the pool
@@ -316,8 +312,6 @@ This is a cryptocurrency miner for Nvidia GPUs
           Examples:
           --autolykos2-prebuild on,off,on
               enables prebuild for GPU#0 and GPU#2 and disables for GPU#1
-          
-          [default: ]
 
       --zil-countdown
           Enables Zilliqa countdown timer
