@@ -25,6 +25,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * etchash+ironfish
 * octa+ironfish
 * autolykos2+sha512256d
+* autolykos2+kheavyhash
 * any single or dual algorithm combination + zil
 
 ## Developer fee
@@ -181,6 +182,8 @@ This is a cryptocurrency miner for Nvidia GPUs
               GPU#2 will dual mine, dual ratio set to 5.2
               GPU#3 will dual mine, primary algorithm hashrate at 92%
               GPU#4 will mine the second algorithm
+          
+          [default: ]
 
       --temp-limit <LIMIT1,LIMIT2,...>
           Sets GPU thermal limits
@@ -202,6 +205,8 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           --temp-limit tc[60-70]tm[105-115]
               enables both core and memory temperature limits
+          
+          [default: ]
 
       --cpu-check
           Enables CPU verification of found shares before sending them to the pool
@@ -296,6 +301,23 @@ This is a cryptocurrency miner for Nvidia GPUs
           --fan-control t:[70;100][_;_-_]
               adjust fan so that core temperature <= 70, memory temperature <= 100,
               with no restrictions on the fan speed
+
+      --autolykos2-prebuild <AUTOLYKOS2_PREBUILD>
+          Enables or disables autolykos2 dataset prebuild. Default is on.
+          
+          Possible values: on, off
+          If the prebuild is enabled for a GPU but there is not enough free
+          memory to hold two datasets, the miner will fall back to using a single
+          dataset and prebuild will be disabled.
+          
+          Comma-separated list of values can be used to set values per-GPU
+          To skip a GPU, set the corresponding value to underscore `_`
+          
+          Examples:
+          --autolykos2-prebuild on,off,on
+              enables prebuild for GPU#0 and GPU#2 and disables for GPU#1
+          
+          [default: ]
 
       --zil-countdown
           Enables Zilliqa countdown timer
