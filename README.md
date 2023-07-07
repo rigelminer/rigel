@@ -299,7 +299,7 @@ This is a cryptocurrency miner for Nvidia GPUs
               with no restrictions on the fan speed
 
       --autolykos2-prebuild <AUTOLYKOS2_PREBUILD>
-          Enables or disables autolykos2 dataset prebuild. Default is on.
+          Enables or disables autolykos2 dataset prebuild. Default is "on".
           
           Possible values: on, off
           If the prebuild is enabled for a GPU but there is not enough free
@@ -312,6 +312,18 @@ This is a cryptocurrency miner for Nvidia GPUs
           Examples:
           --autolykos2-prebuild on,off,on
               enables prebuild for GPU#0 and GPU#2 and disables for GPU#1
+
+      --nexapow-small-lut <NEXAPOW_SMALL_LUT>
+          Enforces using small LUT for Nexa. Default is "off".
+          
+          Possible values: on, off
+          
+          Comma-separated list of values can be used to set values per-GPU
+          To skip a GPU, set the corresponding value to underscore `_`
+          
+          Examples:
+          --nexapow-small-lut on,off,on
+              enforces small LUT for GPU#0 and GPU#2
 
       --zil-countdown
           Enables Zilliqa countdown timer
