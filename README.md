@@ -175,7 +175,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`
           
-          Examples:
+          Example:
           --dual-mode a1,_,a12:r5.2,a12:h92,a2
               GPU#0 will mine the primary algorithm
               GPU#1 will dual mine with default settings (primary algorithm at 95%)
@@ -309,7 +309,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`
           
-          Examples:
+          Example:
           --autolykos2-prebuild on,off,on
               enables prebuild for GPU#0 and GPU#2 and disables for GPU#1
 
@@ -321,9 +321,36 @@ This is a cryptocurrency miner for Nvidia GPUs
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`
           
-          Examples:
+          Example:
           --nexapow-small-lut on,off,on
               enforces small LUT for GPU#0 and GPU#2
+
+      --zil <ZIL>
+          Enables or disables mining Zilliqa per GPU. Default is "on".
+          
+          Possible values: on, off
+          Useful for disabling ZIL mining for individual GPUs
+          
+          Example:
+          --zil off,on,on
+              disables ZIL mining for GPU#0
+
+      --zil-cache-dag <ZIL_CACHE_DAG>
+          Enables or disables caching Zilliqa DAG. Default is "on".
+          
+          Possible values: on, off
+          If enabled, ZIL DAG is generated when the miner starts up and
+          is kept in GPU memory at all times even if it means lower performance
+          for the primary algorithm in dual/triple mining mode.
+          If disabled, the DAG is built on-demand when a ZIL round starts
+          and then destroyed after it's finished.
+          
+          Comma-separated list of values can be used to set values per-GPU
+          To skip a GPU, set the corresponding value to underscore `_`
+          
+          Example:
+          --zil-cache-dag on,off,on
+              enables DAG cache for GPU#0 and GPU#2 and disables for GPU#1
 
       --zil-countdown
           Enables Zilliqa countdown timer
