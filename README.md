@@ -24,6 +24,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * ethash+ironfish
 * etchash+ironfish
 * octa+ironfish
+* autolykos2+alephium
 * autolykos2+sha512256d
 * autolykos2+kheavyhash
 * any single or dual algorithm combination + zil
