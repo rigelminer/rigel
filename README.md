@@ -8,6 +8,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * autolykos2 (Ergo)
 * ethash (Ethereum PoW)
 * etchash (Ethereum Classic)
+* ethashb3 (Rethereum)
 * ironfish (Iron Fish)
 * sha512256d (Radiant)
 * octa (Octa.Space)
@@ -35,6 +36,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | alephium   | 0.7% |
 | autolykos2 | 1.0% |
 | ethash     | 0.7% |
+| ethashb3   | 1.0% |
 | etchash    | 0.7% |
 | ironfish   | 0.7% |
 | sha512256d | 1.0% |
@@ -62,6 +64,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           alephium    (Alephium)
           etchash     (Ethereum Classic)
           ethash      (Ethereum PoW)
+          ethashb3    (Rethereum)
           flora       (Flora)
           ironfish    (Iron Fish)
           kheavyhash  (Kaspa)
