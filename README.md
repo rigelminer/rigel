@@ -4,18 +4,25 @@ This is a cryptocurrency miner for Nvidia GPUs
 ![rigel screenshot kaspa](https://user-images.githubusercontent.com/119491468/204991320-802a9de8-8a77-4527-b802-846d542eb05e.png)
 
 ## Supported algorithms
-* alephium (Alephium)
-* autolykos2 (Ergo)
-* ethash (Ethereum PoW)
-* etchash (Ethereum Classic)
-* ethashb3 (Rethereum)
-* ironfish (Iron Fish)
-* sha512256d (Radiant)
-* octa (Octa.Space)
-* flora (Flora)
-* zil (Zilliqa)
-* kheavyhash (Kaspa)
-* nexapow (Nexa)
+| Algorithm  | Coin(s) | Fee  |
+|------------|---------|------|
+| alephium   | ALPH    | 0.7% |
+| autolykos2 | ERGO    | 1.0% |
+| clore      | CLORE   | 1.0% |
+| ethash     | ETHW    | 0.7% |
+| ethashb3   | RTH     | 1.0% |
+| etchash    | ETC     | 0.7% |
+| flora      | FLORA   | 0.7% |
+| ironfish   | IRON    | 0.7% |
+| kheavyhash | KAS     | 0.7% |
+| neurai     | XNA     | 1.0% |
+| nexapow    | NEXA    | 2.0% |
+| octa       | OCTA    | 0.7% |
+| ravencoin  | RVN     | 1.0% |
+| sha512256d | RXD     | 1.0% |
+| zil        | ZIL     | 0%   |
+
+### Dual mining
 * ethash+kheavyhash
 * etchash+kheavyhash
 * octa+kheavyhash
@@ -34,22 +41,6 @@ This is a cryptocurrency miner for Nvidia GPUs
 * autolykos2+kheavyhash
 * any single or dual algorithm combination + zil
 
-## Developer fee
-| Algorithm  | Fee  |
-|------------|------|
-| alephium   | 0.7% |
-| autolykos2 | 1.0% |
-| ethash     | 0.7% |
-| ethashb3   | 1.0% |
-| etchash    | 0.7% |
-| ironfish   | 0.7% |
-| sha512256d | 1.0% |
-| octa       | 0.7% |
-| flora      | 0.7% |
-| zil        | 0%   |
-| kheavyhash | 0.7% |
-| nexapow    | 2.0% |
-
 ## Features
 * Available on Linux and Windows
 * Terminal user interface
@@ -65,17 +56,21 @@ This is a cryptocurrency miner for Nvidia GPUs
           Selects the mining algorithm
           
           Currently supported:
-          alephium    (Alephium)
-          etchash     (Ethereum Classic)
-          ethash      (Ethereum PoW)
-          ethashb3    (Rethereum)
-          flora       (Flora)
-          ironfish    (Iron Fish)
-          kheavyhash  (Kaspa)
-          nexapow     (Nexa)
-          octa        (Octa.Space)
-          sha512256d  (Radiant)
-          zil         (Zilliqa)
+          alephium   (ALPH)
+          autolykos2 (ERGO)
+          clore      (CLORE)
+          ethash     (ETHW)
+          ethashb3   (RTH)
+          etchash    (ETC)
+          flora      (FLORA)
+          ironfish   (IRON)
+          kheavyhash (KAS)
+          neurai     (XNA)
+          nexapow    (NEXA)
+          octa       (OCTA)
+          ravencoin  (RVN)
+          sha512256d (RXD)
+          zil        (ZIL)
           
           To dual or triple mine pass the algorithm list
           separated by `+`, e.g. `octa+kheavyhash+zil`
