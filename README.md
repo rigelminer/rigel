@@ -15,6 +15,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | flora      | FLORA   | 0.7% |
 | ironfish   | IRON    | 0.7% |
 | kheavyhash | KAS     | 0.7% |
+| neoxa      | NEOX    | 1.0% |
 | neurai     | XNA     | 1.0% |
 | nexapow    | NEXA    | 2.0% |
 | octa       | OCTA    | 0.7% |
@@ -65,6 +66,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           flora      (FLORA)
           ironfish   (IRON)
           kheavyhash (KAS)
+          neoxa      (NEOX)
           neurai     (XNA)
           nexapow    (NEXA)
           octa       (OCTA)
