@@ -19,27 +19,25 @@ This is a cryptocurrency miner for Nvidia GPUs
 | neurai     | XNA     | 1.0% |
 | nexapow    | NEXA    | 2.0% |
 | octa       | OCTA    | 0.7% |
+| octopus    | CFX     | 2.0% |
 | ravencoin  | RVN     | 1.0% |
 | sha512256d | RXD     | 1.0% |
 | zil        | ZIL     | 0%   |
 
 ### Dual mining
-* ethash+kheavyhash
-* etchash+kheavyhash
-* octa+kheavyhash
-* ethash+alephium
-* etchash+alephium
-* octa+alephium
-* ethash+ironfish
-* etchash+ironfish
-* octa+ironfish
+* (ethash/etchash/octa/flora)+alephium
+* (ethash/etchash/octa/flora)+ironfish
+* (ethash/etchash/octa/flora)+kheavyhash
+* (ethash/etchash/octa/flora)+sha512256d
 * ethashb3+alephium
 * ethashb3+ironfish
 * ethashb3+sha512256d
 * autolykos2+alephium
 * autolykos2+ironfish
-* autolykos2+sha512256d
 * autolykos2+kheavyhash
+* autolykos2+sha512256d
+* octopus+alephium
+* octopus+sha512256d
 * any single or dual algorithm combination + zil
 
 ## Features
@@ -70,6 +68,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           neurai     (XNA)
           nexapow    (NEXA)
           octa       (OCTA)
+          octopus    (CFX)
           ravencoin  (RVN)
           sha512256d (RXD)
           zil        (ZIL)
