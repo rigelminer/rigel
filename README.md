@@ -12,7 +12,6 @@ This is a cryptocurrency miner for Nvidia GPUs
 | ethash     | ETHW    | 0.7% |
 | ethashb3   | RTH     | 1.0% |
 | etchash    | ETC     | 0.7% |
-| flora      | FLORA   | 0.7% |
 | ironfish   | IRON    | 0.7% |
 | kheavyhash | KAS     | 0.7% |
 | neoxa      | NEOX    | 1.0% |
@@ -20,15 +19,16 @@ This is a cryptocurrency miner for Nvidia GPUs
 | nexapow    | NEXA    | 2.0% |
 | octa       | OCTA    | 0.7% |
 | octopus    | CFX     | 2.0% |
+| powblocks  | XPB     | 0.7% |
 | ravencoin  | RVN     | 1.0% |
 | sha512256d | RXD     | 1.0% |
 | zil        | ZIL     | 0%   |
 
 ### Dual mining
-* (ethash/etchash/octa/flora)+alephium
-* (ethash/etchash/octa/flora)+ironfish
-* (ethash/etchash/octa/flora)+kheavyhash
-* (ethash/etchash/octa/flora)+sha512256d
+* (ethash/etchash/octa/powblocks)+alephium
+* (ethash/etchash/octa/powblocks)+ironfish
+* (ethash/etchash/octa/powblocks)+kheavyhash
+* (ethash/etchash/octa/powblocks)+sha512256d
 * ethashb3+alephium
 * ethashb3+ironfish
 * ethashb3+sha512256d
@@ -61,7 +61,6 @@ This is a cryptocurrency miner for Nvidia GPUs
           ethash     (ETHW)
           ethashb3   (RTH)
           etchash    (ETC)
-          flora      (FLORA)
           ironfish   (IRON)
           kheavyhash (KAS)
           neoxa      (NEOX)
@@ -69,6 +68,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           nexapow    (NEXA)
           octa       (OCTA)
           octopus    (CFX)
+          powblocks  (XPB)
           ravencoin  (RVN)
           sha512256d (RXD)
           zil        (ZIL)
