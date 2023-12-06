@@ -4,37 +4,38 @@ This is a cryptocurrency miner for Nvidia GPUs
 ![rigel screenshot kaspa](https://user-images.githubusercontent.com/119491468/204991320-802a9de8-8a77-4527-b802-846d542eb05e.png)
 
 ## Supported algorithms
-| Algorithm  | Coin(s) | Fee  |
-|------------|---------|------|
-| alephium   | ALPH    | 0.7% |
-| autolykos2 | ERGO    | 1.0% |
-| clore      | CLORE   | 1.0% |
-| ethash     | ETHW    | 0.7% |
-| ethashb3   | RTH     | 1.0% |
-| etchash    | ETC     | 0.7% |
-| ironfish   | IRON    | 0.7% |
-| kheavyhash | KAS     | 0.7% |
-| neoxa      | NEOX    | 1.0% |
-| neurai     | XNA     | 1.0% |
-| nexapow    | NEXA    | 2.0% |
-| octa       | OCTA    | 0.7% |
-| octopus    | CFX     | 2.0% |
-| powblocks  | XPB     | 0.7% |
-| ravencoin  | RVN     | 1.0% |
-| sha512256d | RXD     | 1.0% |
-| zil        | ZIL     | 0%   |
+| Algorithm   | Coin(s) | Fee  |
+|-------------|---------|------|
+| alephium    | ALPH    | 0.7% |
+| autolykos2  | ERGO    | 1.0% |
+| clore       | CLORE   | 1.0% |
+| ethash      | ETHW    | 0.7% |
+| ethashb3    | RTH     | 1.0% |
+| etchash     | ETC     | 0.7% |
+| ironfish    | IRON    | 0.7% |
+| karlsenhash | KLS     | 1.0% |
+| neoxa       | NEOX    | 1.0% |
+| neurai      | XNA     | 1.0% |
+| nexapow     | NEXA    | 2.0% |
+| octa        | OCTA    | 0.7% |
+| octopus     | CFX     | 2.0% |
+| powblocks   | XPB     | 0.7% |
+| ravencoin   | RVN     | 1.0% |
+| sha512256d  | RXD     | 1.0% |
+| zil         | ZIL     | 0%   |
 
 ### Dual mining
 * (ethash/etchash/octa/powblocks)+alephium
 * (ethash/etchash/octa/powblocks)+ironfish
-* (ethash/etchash/octa/powblocks)+kheavyhash
+* (ethash/etchash/octa/powblocks)+karlsenhash
 * (ethash/etchash/octa/powblocks)+sha512256d
 * ethashb3+alephium
 * ethashb3+ironfish
+* ethashb3+karlsenhash
 * ethashb3+sha512256d
 * autolykos2+alephium
 * autolykos2+ironfish
-* autolykos2+kheavyhash
+* autolykos2+karlsenhash
 * autolykos2+sha512256d
 * octopus+alephium
 * octopus+sha512256d
@@ -55,26 +56,26 @@ This is a cryptocurrency miner for Nvidia GPUs
           Selects the mining algorithm
           
           Currently supported:
-          alephium   (ALPH)
-          autolykos2 (ERGO)
-          clore      (CLORE)
-          ethash     (ETHW)
-          ethashb3   (RTH)
-          etchash    (ETC)
-          ironfish   (IRON)
-          kheavyhash (KAS)
-          neoxa      (NEOX)
-          neurai     (XNA)
-          nexapow    (NEXA)
-          octa       (OCTA)
-          octopus    (CFX)
-          powblocks  (XPB)
-          ravencoin  (RVN)
-          sha512256d (RXD)
-          zil        (ZIL)
+          alephium    (ALPH)
+          autolykos2  (ERGO)
+          clore       (CLORE)
+          ethash      (ETHW)
+          ethashb3    (RTH)
+          etchash     (ETC)
+          ironfish    (IRON)
+          karlsenhash (KLS)
+          neoxa       (NEOX)
+          neurai      (XNA)
+          nexapow     (NEXA)
+          octa        (OCTA)
+          octopus     (CFX)
+          powblocks   (XPB)
+          ravencoin   (RVN)
+          sha512256d  (RXD)
+          zil         (ZIL)
           
           To dual or triple mine pass the algorithm list
-          separated by `+`, e.g. `octa+kheavyhash+zil`
+          separated by `+`, e.g. `octa+karlsenhash+zil`
 
       --a1 <ALGORITHM>
           Sets the primary algorithm (alternative to `-a`)
