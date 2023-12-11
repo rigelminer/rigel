@@ -38,6 +38,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * autolykos2+karlsenhash
 * autolykos2+sha512256d
 * octopus+alephium
+* octopus+karlsenhash
 * octopus+sha512256d
 * any single or dual algorithm combination + zil
 
