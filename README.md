@@ -20,6 +20,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | octa        | OCTA    | 0.7% |
 | octopus     | CFX     | 2.0% |
 | powblocks   | XPB     | 0.7% |
+| pyrinhash   | PYI     | 1.0% |
 | ravencoin   | RVN     | 1.0% |
 | sha512256d  | RXD     | 1.0% |
 | zil         | ZIL     | 0%   |
