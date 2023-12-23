@@ -29,17 +29,21 @@ This is a cryptocurrency miner for Nvidia GPUs
 * (ethash/etchash/octa/powblocks)+alephium
 * (ethash/etchash/octa/powblocks)+ironfish
 * (ethash/etchash/octa/powblocks)+karlsenhash
+* (ethash/etchash/octa/powblocks)+pyrinhash
 * (ethash/etchash/octa/powblocks)+sha512256d
 * ethashb3+alephium
 * ethashb3+ironfish
 * ethashb3+karlsenhash
+* ethashb3+pyrinhash
 * ethashb3+sha512256d
 * autolykos2+alephium
 * autolykos2+ironfish
 * autolykos2+karlsenhash
+* autolykos2+pyrinhash
 * autolykos2+sha512256d
 * octopus+alephium
 * octopus+karlsenhash
+* octopus+pyrinhash
 * octopus+sha512256d
 * any single or dual algorithm combination + zil
 
@@ -72,6 +76,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           octa        (OCTA)
           octopus     (CFX)
           powblocks   (XPB)
+          pyrinhash   (PYI)
           ravencoin   (RVN)
           sha512256d  (RXD)
           zil         (ZIL)
