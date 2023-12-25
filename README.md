@@ -6,11 +6,12 @@ This is a cryptocurrency miner for Nvidia GPUs
 ## Supported algorithms
 | Algorithm   | Coin(s) | Fee  |
 |-------------|---------|------|
+| aipg        | AIPG    | 1.0% |
 | alephium    | ALPH    | 0.7% |
 | autolykos2  | ERGO    | 1.0% |
 | clore       | CLORE   | 1.0% |
 | ethash      | ETHW    | 0.7% |
-| ethashb3    | RTH     | 1.0% |
+| ethashb3    | HYP     | 1.0% |
 | etchash     | ETC     | 0.7% |
 | ironfish    | IRON    | 0.7% |
 | karlsenhash | KLS     | 1.0% |
@@ -66,7 +67,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           autolykos2  (ERGO)
           clore       (CLORE)
           ethash      (ETHW)
-          ethashb3    (RTH)
+          ethashb3    (HYP)
           etchash     (ETC)
           ironfish    (IRON)
           karlsenhash (KLS)
