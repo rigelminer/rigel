@@ -423,6 +423,10 @@ This is a cryptocurrency miner for Nvidia GPUs
       --long-timestamps
           Enables milliseconds timestamps in the miner output
 
+      --no-pool-url
+          Hides pool URL from the share submissions log
+          and displays the algorithm name instead
+
       --no-tui
           Disables terminal user interface (TUI)
 
