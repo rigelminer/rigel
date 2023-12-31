@@ -311,10 +311,9 @@ This is a cryptocurrency miner for Nvidia GPUs
               adjust fan so that core temperature <= 70, memory temperature <= 100,
               with no restrictions on the fan speed
 
-      --autolykos2-prebuild <AUTOLYKOS2_PREBUILD>
+      --autolykos2-prebuild <on/off>
           Enables or disables autolykos2 dataset prebuild. Default is "on".
           
-          Possible values: on, off
           If the prebuild is enabled for a GPU but there is not enough free
           memory to hold two datasets, the miner will fall back to using a single
           dataset and prebuild will be disabled.
@@ -326,10 +325,8 @@ This is a cryptocurrency miner for Nvidia GPUs
           --autolykos2-prebuild on,off,on
               enables prebuild for GPU#0 and GPU#2 and disables for GPU#1
 
-      --nexapow-small-lut <NEXAPOW_SMALL_LUT>
+      --nexapow-small-lut <on/off>
           Enforces using small LUT for Nexa. Default is "off".
-          
-          Possible values: on, off
           
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`
@@ -338,20 +335,18 @@ This is a cryptocurrency miner for Nvidia GPUs
           --nexapow-small-lut on,off,on
               enforces small LUT for GPU#0 and GPU#2
 
-      --zil <ZIL>
+      --zil <on/off>
           Enables or disables mining Zilliqa per GPU. Default is "on".
           
-          Possible values: on, off
           Useful for disabling ZIL mining for individual GPUs
           
           Example:
           --zil off,on,on
               disables ZIL mining for GPU#0
 
-      --zil-cache-dag <ZIL_CACHE_DAG>
+      --zil-cache-dag <on/off>
           Enables or disables caching Zilliqa DAG. Default is "on".
           
-          Possible values: on, off
           If enabled, ZIL DAG is generated when the miner starts up and
           is kept in GPU memory at all times even if it means lower performance
           for the primary algorithm in dual/triple mining mode.
@@ -367,6 +362,9 @@ This is a cryptocurrency miner for Nvidia GPUs
 
       --zil-countdown
           Enables Zilliqa countdown timer
+
+      --zil-retain-hashrate <on/off>
+          Enables or disables displaying ZIL hashrate between rounds. Default is "on".
 
       --zil-test
           Enables Zilliqa mining test mode
