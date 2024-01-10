@@ -4,44 +4,28 @@ This is a cryptocurrency miner for Nvidia GPUs
 ![rigel screenshot kaspa](https://user-images.githubusercontent.com/119491468/204991320-802a9de8-8a77-4527-b802-846d542eb05e.png)
 
 ## Supported algorithms
-| Algorithm   | Coin(s) | Fee  |
-|-------------|---------|------|
-| aipg        | AIPG    | 1.0% |
-| alephium    | ALPH    | 0.7% |
-| autolykos2  | ERGO    | 1.0% |
-| clore       | CLORE   | 1.0% |
-| ethash      | ETHW    | 0.7% |
-| ethashb3    | HYP     | 1.0% |
-| etchash     | ETC     | 0.7% |
-| ironfish    | IRON    | 0.7% |
-| karlsenhash | KLS     | 1.0% |
-| neoxa       | NEOX    | 1.0% |
-| neurai      | XNA     | 1.0% |
-| nexapow     | NEXA    | 2.0% |
-| octa        | OCTA    | 0.7% |
-| octopus     | CFX     | 2.0% |
-| powblocks   | XPB     | 0.7% |
-| pyrinhash   | PYI     | 1.0% |
-| ravencoin   | RVN     | 1.0% |
-| sha512256d  | RXD     | 1.0% |
-| zil         | ZIL     | 0%   |
+| Algorithm   | Coin(s)                                 | Fee  |
+|-------------|-----------------------------------------|------|
+| alephium    | ALPH                                    | 0.7% |
+| autolykos2  | ERGO                                    | 1.0% |
+| etchash     | ETC                                     | 0.7% |
+| ethash      | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
+| ethashb3    | HYP                                     | 1.0% |
+| ironfish    | IRON                                    | 0.7% |
+| karlsenhash | KLS                                     | 1.0% |
+| kawpow      | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
+| nexapow     | NEXA                                    | 2.0% |
+| octopus     | CFX                                     | 2.0% |
+| pyrinhash   | PYI                                     | 1.0% |
+| sha512256d  | RXD                                     | 1.0% |
+| zil         | ZIL                                     | 0%   |
 
 ### Dual mining
-* (ethash/etchash/octa/powblocks)+alephium
-* (ethash/etchash/octa/powblocks)+ironfish
-* (ethash/etchash/octa/powblocks)+karlsenhash
-* (ethash/etchash/octa/powblocks)+pyrinhash
-* (ethash/etchash/octa/powblocks)+sha512256d
-* ethashb3+alephium
-* ethashb3+ironfish
-* ethashb3+karlsenhash
-* ethashb3+pyrinhash
-* ethashb3+sha512256d
-* autolykos2+alephium
-* autolykos2+ironfish
-* autolykos2+karlsenhash
-* autolykos2+pyrinhash
-* autolykos2+sha512256d
+* (autolykos2/etchash/ethash/ethashb3)+alephium
+* (autolykos2/etchash/ethash/ethashb3)+ironfish
+* (autolykos2/etchash/ethash/ethashb3)+karlsenhash
+* (autolykos2/etchash/ethash/ethashb3)+pyrinhash
+* (autolykos2/etchash/ethash/ethashb3)+sha512256d
 * octopus+alephium
 * octopus+karlsenhash
 * octopus+pyrinhash
@@ -65,20 +49,15 @@ This is a cryptocurrency miner for Nvidia GPUs
           Currently supported:
           alephium    (ALPH)
           autolykos2  (ERGO)
-          clore       (CLORE)
-          ethash      (ETHW)
-          ethashb3    (HYP)
           etchash     (ETC)
+          ethash      (ETHW, XPB, OCTA, etc.)
+          ethashb3    (HYP)
           ironfish    (IRON)
           karlsenhash (KLS)
-          neoxa       (NEOX)
-          neurai      (XNA)
+          kawpow      (RVN, AIPG, XNA, CLORE, NEOX, etc.)
           nexapow     (NEXA)
-          octa        (OCTA)
           octopus     (CFX)
-          powblocks   (XPB)
           pyrinhash   (PYI)
-          ravencoin   (RVN)
           sha512256d  (RXD)
           zil         (ZIL)
           
@@ -93,6 +72,28 @@ This is a cryptocurrency miner for Nvidia GPUs
 
       --a3 <ALGORITHM>
           Sets the third algorithm (alternative to `-a`)
+
+      --coin <COIN>
+          Sets the coin ticker
+          
+          Only applicable to DAG based algorithms used by multiple coins.
+          Unless you're mining to a profit switching pool like Nicehash,
+          setting the coin ticker has the benefit of eliminating DAG rebuilds when
+          the miner switches to dev fee and back to the user job.
+          Note that not all possible coins are recognised by the miner,
+          and the up-to-date list is maintained on the project's webpage.
+          
+          Supported coins (the list is not exhaustive):
+          `kawpow`: aipg, clore, neox, xna, rvn
+          `ethash`: ethw, octa, xpb
+          
+          When dual or triple mining the value should be prepended with
+          the algorithm index `[<index>]`. Primary algorithm has index 1.
+          
+          Examples:
+          --coin rvn
+          --coin aipg
+          --coin [1]octa
 
   -o, --url <URL>
           Sets the pool URL
@@ -324,6 +325,38 @@ This is a cryptocurrency miner for Nvidia GPUs
           Example:
           --autolykos2-prebuild on,off,on
               enables prebuild for GPU#0 and GPU#2 and disables for GPU#1
+
+      --ethash-cache-dag <on/off>
+          Enables or disables ethash DAG caching. Default is "on".
+          
+          If enabled, the miner attempts to keep DAGs for different epochs in
+          memory to avoid rebuilding them in the future if another job with the same
+          epoch is received again.
+          The only limiting factor of how many DAGs can be kept is the amount of
+          memory on the GPU.
+          
+          Comma-separated list of values can be used to set values per-GPU
+          To skip a GPU, set the corresponding value to underscore `_`
+          
+          Example:
+          --ethash-cache-dag on,off,on
+              enables DAG cache for GPU#0 and GPU#2 and disables for GPU#1
+
+      --kawpow-cache-dag <on/off>
+          Enables or disables kawpow DAG caching. Default is "on".
+          
+          If enabled, the miner attempts to keep DAGs for different epochs in
+          memory to avoid rebuilding them in the future if another job with the same
+          epoch is received again.
+          The only limiting factor of how many DAGs can be kept is the amount of
+          memory on the GPU.
+          
+          Comma-separated list of values can be used to set values per-GPU
+          To skip a GPU, set the corresponding value to underscore `_`
+          
+          Example:
+          --kawpow-cache-dag on,off,on
+              enables DAG cache for GPU#0 and GPU#2 and disables for GPU#1
 
       --nexapow-small-lut <on/off>
           Enforces using small LUT for Nexa. Default is "off".
