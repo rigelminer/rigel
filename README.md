@@ -425,6 +425,24 @@ This is a cryptocurrency miner for Nvidia GPUs
 
   -l, --log-file <LOG_FILE>
           Enables logging output of the miner to the specified log file
+          
+          If the log file already exists it will be appended.
+          The miner uses log rotation keeping maximum of 5 log files,
+          size limit is 5MB.
+          
+          Supports the following template parameters:
+              `{algo}` - algorithm name
+              `{ts}` - timestamp in the format "yyyyMMdd_HHmmss"
+                       note when using this option the miner will be creating
+                       a new log file every time it is launched
+          
+          Example:
+          --log-file rigel_{algo}_{ts}.log
+          
+          Files created:
+              rigel_kawpow_20240115_123240.log
+              rigel_kawpow_20240116_185402.log
+              rigel_kawpow_20240116_190938.log
 
       --log-network
           Enables logging network traffic (useful for debugging)
