@@ -6,6 +6,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 ## Supported algorithms
 | Algorithm   | Coin(s)                                 | Fee  |
 |-------------|-----------------------------------------|------|
+| abelian     | ABEL                                    | 1.0% |
 | alephium    | ALPH                                    | 0.7% |
 | autolykos2  | ERGO                                    | 1.0% |
 | etchash     | ETC                                     | 0.7% |
@@ -47,6 +48,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Selects the mining algorithm
           
           Currently supported:
+          abelian     (ABEL)
           alephium    (ALPH)
           autolykos2  (ERGO)
           etchash     (ETC)
@@ -463,7 +465,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Useful with self-hosted mining solutions where the mining pool
           provides a self-signed certificate.
           However, adding the certificate to the system's trust store
-          should be preferred.
+          should be preferred (see https://github.com/rigelminer/rigel/issues/130).
 
       --stats-interval <SECONDS>
           GPU stats reporting interval in seconds. Default is 20.
