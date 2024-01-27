@@ -22,11 +22,11 @@ This is a cryptocurrency miner for Nvidia GPUs
 | zil         | ZIL                                     | 0%   |
 
 ### Dual mining
-* (autolykos2/etchash/ethash/ethashb3)+alephium
-* (autolykos2/etchash/ethash/ethashb3)+ironfish
-* (autolykos2/etchash/ethash/ethashb3)+karlsenhash
-* (autolykos2/etchash/ethash/ethashb3)+pyrinhash
-* (autolykos2/etchash/ethash/ethashb3)+sha512256d
+* (abelian/autolykos2/etchash/ethash/ethashb3)+alephium
+* (abelian/autolykos2/etchash/ethash/ethashb3)+ironfish
+* (abelian/autolykos2/etchash/ethash/ethashb3)+karlsenhash
+* (abelian/autolykos2/etchash/ethash/ethashb3)+pyrinhash
+* (abelian/autolykos2/etchash/ethash/ethashb3)+sha512256d
 * octopus+alephium
 * octopus+karlsenhash
 * octopus+pyrinhash
