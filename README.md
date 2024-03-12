@@ -12,8 +12,9 @@ This is a cryptocurrency miner for Nvidia GPUs
 | etchash     | ETC                                     | 0.7% |
 | ethash      | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
 | ethashb3    | HYP                                     | 1.0% |
+| fishhash    | IRON                                    | 1.0% |
 | ironfish    | IRON                                    | 0.7% |
-| karlsenhash | KLS                                     | 1.0% |
+| karlsenhash | KLS<br/>NXL                             | 1.0% |
 | kawpow      | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
 | nexapow     | NEXA                                    | 2.0% |
 | octopus     | CFX                                     | 2.0% |
@@ -27,6 +28,10 @@ This is a cryptocurrency miner for Nvidia GPUs
 * (abelian/autolykos2/etchash/ethash/ethashb3)+karlsenhash
 * (abelian/autolykos2/etchash/ethash/ethashb3)+pyrinhash
 * (abelian/autolykos2/etchash/ethash/ethashb3)+sha512256d
+* fishhash+alephium
+* fishhash+karlsenhash
+* fishhash+pyrinhash
+* fishhash+sha512256d
 * octopus+alephium
 * octopus+karlsenhash
 * octopus+pyrinhash
@@ -54,6 +59,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           etchash     (ETC)
           ethash      (ETHW, XPB, OCTA, etc.)
           ethashb3    (HYP)
+          fishhash    (IRON)
           ironfish    (IRON)
           karlsenhash (KLS)
           kawpow      (RVN, AIPG, XNA, CLORE, NEOX, etc.)
@@ -314,6 +320,17 @@ This is a cryptocurrency miner for Nvidia GPUs
               adjust fan so that core temperature <= 70, memory temperature <= 100,
               with no restrictions on the fan speed
 
+      --dag-reset-mclock <on/off>
+          Enables or disables resetting memory overclock during DAG generation. Default is "on".
+          
+          If enabled, the miner sets the GPU memory clock offset to 0 MHz before
+          building the DAG to avoid its corruption, and re-applies the original offset
+          after the DAG has been built.
+          
+          Example:
+          --dag-reset-mclock off
+              disables memory OC reset (useful when OC is controlled by an external tool)
+
       --autolykos2-prebuild <on/off>
           Enables or disables autolykos2 dataset prebuild. Default is "on".
           
@@ -456,6 +473,17 @@ This is a cryptocurrency miner for Nvidia GPUs
           --api-bind 127.0.0.1:5000
           --api-bind 0.0.0.0:5000
 
+      --proxy <PROXY>
+          Sets SOCKS5 proxy for all network connections
+          
+          Format:
+          No auth: <host>:<port>
+          Auth: <username>:<password>@<host>:<port>
+          
+          Examples:
+          --proxy 127.0.0.1:8091
+          --proxy admin:qwerty@myproxy.server.com:8080
+
       --dns-over-https
           Enables pool DNS resolution using DNS-over-HTTPS (Cloudflare)
 
@@ -477,6 +505,9 @@ This is a cryptocurrency miner for Nvidia GPUs
       --no-pool-url
           Hides pool URL from the share submissions log
           and displays the algorithm name instead
+
+      --no-colour
+          Disables colour in the miner output (TUI would still display colours)
 
       --no-tui
           Disables terminal user interface (TUI)
