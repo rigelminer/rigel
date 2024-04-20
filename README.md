@@ -13,12 +13,13 @@ This is a cryptocurrency miner for Nvidia GPUs
 | ethash      | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
 | ethashb3    | HYP                                     | 1.0% |
 | fishhash    | IRON                                    | 1.0% |
-| ironfish    | IRON                                    | 0.7% |
+| ironfish    | IRON (pre-fork)                         | 0.7% |
 | karlsenhash | KLS<br/>NXL                             | 1.0% |
 | kawpow      | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
 | nexapow     | NEXA                                    | 2.0% |
 | octopus     | CFX                                     | 2.0% |
 | pyrinhash   | PYI                                     | 1.0% |
+| sha256ton   | GRAM                                    | 1.0% |
 | sha512256d  | RXD                                     | 1.0% |
 | zil         | ZIL                                     | 0%   |
 
@@ -27,14 +28,17 @@ This is a cryptocurrency miner for Nvidia GPUs
 * (abelian/autolykos2/etchash/ethash/ethashb3)+ironfish
 * (abelian/autolykos2/etchash/ethash/ethashb3)+karlsenhash
 * (abelian/autolykos2/etchash/ethash/ethashb3)+pyrinhash
+* (abelian/autolykos2/etchash/ethash/ethashb3)+sha256ton
 * (abelian/autolykos2/etchash/ethash/ethashb3)+sha512256d
 * fishhash+alephium
 * fishhash+karlsenhash
 * fishhash+pyrinhash
+* fishhash+sha256ton
 * fishhash+sha512256d
 * octopus+alephium
 * octopus+karlsenhash
 * octopus+pyrinhash
+* octopus+sha256ton
 * octopus+sha512256d
 * any single or dual algorithm combination + zil
 
@@ -60,12 +64,13 @@ This is a cryptocurrency miner for Nvidia GPUs
           ethash      (ETHW, XPB, OCTA, etc.)
           ethashb3    (HYP)
           fishhash    (IRON)
-          ironfish    (IRON)
+          ironfish    (pre-fork IRON)
           karlsenhash (KLS)
           kawpow      (RVN, AIPG, XNA, CLORE, NEOX, etc.)
           nexapow     (NEXA)
           octopus     (CFX)
           pyrinhash   (PYI)
+          sha256ton   (GRAM)
           sha512256d  (RXD)
           zil         (ZIL)
           
@@ -303,6 +308,8 @@ This is a cryptocurrency miner for Nvidia GPUs
                   fan speed range to [`Fmin`%,`Fmax`%] range.
                   every value is optional and can be set to underscore `_`
                   meaning the default value should be used.
+              --fan-control X
+                  let the driver/OS manage the fan speed (auto)
           
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`.
@@ -330,6 +337,9 @@ This is a cryptocurrency miner for Nvidia GPUs
           Example:
           --dag-reset-mclock off
               disables memory OC reset (useful when OC is controlled by an external tool)
+
+      --reset-oc
+          Reset all overclock (including fan control) to default settings and exit
 
       --autolykos2-prebuild <on/off>
           Enables or disables autolykos2 dataset prebuild. Default is "on".
@@ -442,6 +452,15 @@ This is a cryptocurrency miner for Nvidia GPUs
               the miner will mine the primary algorithm for 10 seconds, switch to ZIL,
               mine ZIL for 60 seconds, switch back, and so on
 
+      --enable-fork
+          Enables algorithm switch for hard forks
+
+      --activate-fork
+          Activates algorithm switch for hard forks
+          
+          Can be used to simulate post-hard fork behaviour and test
+          overclock settings, stratum connectivity etc. before the fork
+
   -l, --log-file <LOG_FILE>
           Enables logging output of the miner to the specified log file
           
@@ -474,7 +493,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           --api-bind 0.0.0.0:5000
 
       --proxy <PROXY>
-          Sets SOCKS5 proxy for all network connections
+          Sets SOCKS5 proxy for all network connections including DNS lookups
           
           Format:
           No auth: <host>:<port>
@@ -511,6 +530,34 @@ This is a cryptocurrency miner for Nvidia GPUs
 
       --no-tui
           Disables terminal user interface (TUI)
+
+      --multi-device-arg-mode <MULTI_DEVICE_ARG_MODE>
+          Defines argument validation in multi-GPU mode. Default is "match".
+          
+          Applicable to all per-GPU arguments (`--cclock`, `--mclock`, `--temp-limit`,
+          `--kernel` etc.) when the number of supplied values is more than one and
+          doesn't match the number of GPUs - this usually occurs when one of the GPUs
+          disappears from the system (taken out for maintenance, PCIE connectivity loss
+          and so on) but the miner is run with the same config.
+          
+          Accepted values:
+              match - display an error and exit if the number of values doesn't match
+                      the number of GPUs exactly
+              first - ignore any extra values if too many, and use the first value in the list
+                      for the GPUs that don't have a value
+              last  - ignore any extra values if too many, and use the last value in the list
+                      for the GPUs that don't have a value
+          
+          Example (assuming 3 GPUs available):
+              --multi-device-arg-mode first
+                  "--lock-cclock 1100,1200,1300,1400" will result in
+                      GPU#0 1100
+                      GPU#1 1200
+                      GPU#2 1300
+                  "--lock-cclock 1100,1200" will result in
+                      GPU#0 1100
+                      GPU#1 1200
+                      GPU#2 1100
 
       --no-watchdog
           Disables miner watchdog
