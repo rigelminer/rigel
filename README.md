@@ -21,6 +21,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | pyrinhash   | PYI                                     | 1.0% |
 | sha256ton   | GRAM                                    | 1.0% |
 | sha512256d  | RXD                                     | 1.0% |
+| xelishash   | XEL                                     | 3.0% |
 | zil         | ZIL                                     | 0%   |
 
 ### Dual mining
@@ -72,6 +73,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           pyrinhash   (PYI)
           sha256ton   (GRAM)
           sha512256d  (RXD)
+          xelishash   (XEL)
           zil         (ZIL)
           
           To dual or triple mine pass the algorithm list
@@ -172,8 +174,12 @@ This is a cryptocurrency miner for Nvidia GPUs
           nexapow
               1 - default kernel
               2 - some 20xx and 30xx GPUs may benefit from choosing this kernel
-                  as more energy efficient than #1 when you're after really low
-                  power consumption
+                  as more energy efficient than #1 when targeting low power draw
+          
+          sha256ton
+              1 - default kernel
+              2 - some 40xx GPUs may benefit from choosing this kernel
+                  as more energy efficient than #1 when targeting low power draw
           
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`.
