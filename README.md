@@ -116,7 +116,12 @@ This is a cryptocurrency miner for Nvidia GPUs
           Format:
           <mining protocol>+<transport protocol>://<pool hostname>:<port number>
           
-          Mining protocols:    stratum, ethproxy, ethstratum, zmp (zil only)
+          Mining protocols:
+              stratum
+              ethproxy
+              ethstratum
+              zmp (zil only)
+              solo (xelishash only)
           Transport protocols: tcp, ssl
           
           When dual or triple mining the value should be prepended with
@@ -190,6 +195,23 @@ This is a cryptocurrency miner for Nvidia GPUs
           --kernel _,_,2,2
               GPU#0 and GPU#1 will use their respective default kernels
               GPU#1 and GPU#2 will use kernel #2
+
+      --tune <TUNE1,TUNE2,...>
+          Sets tuning values for selected algorithm(s)
+          
+          Supported algorithms:
+              xelishash
+          
+          Comma-separated list of values can be used to set values per-GPU
+          To skip a GPU, set the corresponding value to underscore `_`.
+          When dual or triple mining the value may be prepended with
+          the algorithm index `[<index>]`. Primary algorithm has index 1.
+          
+          Example:
+          --tune 184,_,320
+              GPU#0 will use tuning value 184
+              GPU#1 will be auto-tuned
+              GPU#2 will use tuning value 320
 
       --dual-mode <MODE1,MODE2,...>
           Controls GPU behaviour in dual mining mode
