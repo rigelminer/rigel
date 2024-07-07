@@ -1,9 +1,11 @@
 # Rigel
+
 This is a cryptocurrency miner for Nvidia GPUs
 
 ![rigel screenshot kaspa](https://user-images.githubusercontent.com/119491468/204991320-802a9de8-8a77-4527-b802-846d542eb05e.png)
 
 ## Supported algorithms
+
 | Algorithm   | Coin(s)                                 | Fee  |
 |-------------|-----------------------------------------|------|
 | abelian     | ABEL                                    | 1.0% |
@@ -21,10 +23,12 @@ This is a cryptocurrency miner for Nvidia GPUs
 | pyrinhash   | PYI                                     | 1.0% |
 | sha256ton   | GRAM                                    | 1.0% |
 | sha512256d  | RXD                                     | 1.0% |
-| xelishash   | XEL                                     | 3.0% |
+| xelishash   | XEL (pre-fork)                          | 3.0% |
+| xelishashv2 | XEL                                     | 2.0% |
 | zil         | ZIL                                     | 0%   |
 
 ### Dual mining
+
 * (abelian/autolykos2/etchash/ethash/ethashb3)+alephium
 * (abelian/autolykos2/etchash/ethash/ethashb3)+ironfish
 * (abelian/autolykos2/etchash/ethash/ethashb3)+karlsenhash
@@ -44,6 +48,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * any single or dual algorithm combination + zil
 
 ## Features
+
 * Available on Linux and Windows
 * Terminal user interface
 * Failover pool support
@@ -53,6 +58,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 * HTTP API
 
 ## Usage
+
 ```
   -a, --algorithm <ALGORITHM>
           Selects the mining algorithm
@@ -73,7 +79,8 @@ This is a cryptocurrency miner for Nvidia GPUs
           pyrinhash   (PYI)
           sha256ton   (GRAM)
           sha512256d  (RXD)
-          xelishash   (XEL)
+          xelishash   (pre-fork XEL)
+          xelishashv2 (XEL)
           zil         (ZIL)
           
           To dual or triple mine pass the algorithm list
@@ -598,5 +605,6 @@ This is a cryptocurrency miner for Nvidia GPUs
 ```
 
 ## Support
+
 Discord: https://discord.gg/zKTgcGgc6k  
 BitcoinTalk: https://bitcointalk.org/index.php?topic=5424675.0
