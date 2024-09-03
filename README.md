@@ -10,12 +10,11 @@ This is a cryptocurrency miner for Nvidia GPUs
 |-------------|-----------------------------------------|------|
 | abelian     | ABEL                                    | 1.0% |
 | alephium    | ALPH                                    | 0.7% |
-| autolykos2  | ERGO                                    | 1.0% |
+| autolykos2  | ERG<br/>BLOCX                           | 1.0% |
 | etchash     | ETC                                     | 0.7% |
 | ethash      | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
 | ethashb3    | HYP                                     | 1.0% |
 | fishhash    | IRON                                    | 1.0% |
-| ironfish    | IRON (pre-fork)                         | 0.7% |
 | karlsenhash | KLS<br/>NXL                             | 1.0% |
 | kawpow      | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
 | nexapow     | NEXA                                    | 2.0% |
@@ -30,7 +29,6 @@ This is a cryptocurrency miner for Nvidia GPUs
 ### Dual mining
 
 * (abelian/autolykos2/etchash/ethash/ethashb3)+alephium
-* (abelian/autolykos2/etchash/ethash/ethashb3)+ironfish
 * (abelian/autolykos2/etchash/ethash/ethashb3)+karlsenhash
 * (abelian/autolykos2/etchash/ethash/ethashb3)+pyrinhash
 * (abelian/autolykos2/etchash/ethash/ethashb3)+sha256ton
@@ -66,12 +64,11 @@ This is a cryptocurrency miner for Nvidia GPUs
           Currently supported:
           abelian     (ABEL)
           alephium    (ALPH)
-          autolykos2  (ERGO)
+          autolykos2  (ERG, BLOCX)
           etchash     (ETC)
           ethash      (ETHW, XPB, OCTA, etc.)
           ethashb3    (HYP)
           fishhash    (IRON)
-          ironfish    (pre-fork IRON)
           karlsenhash (KLS)
           kawpow      (RVN, AIPG, XNA, CLORE, NEOX, etc.)
           nexapow     (NEXA)
@@ -84,7 +81,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           zil         (ZIL)
           
           To dual or triple mine pass the algorithm list
-          separated by `+`, e.g. `octa+karlsenhash+zil`
+          separated by `+`, e.g. `ethash+karlsenhash+zil`
 
       --a1 <ALGORITHM>
           Sets the primary algorithm (alternative to `-a`)
@@ -106,6 +103,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           and the up-to-date list is maintained on the project's webpage.
           
           Supported coins (the list is not exhaustive):
+          `autolykos2`: erg, blocx
           `kawpow`: aipg, clore, neox, xna, rvn
           `ethash`: ethw, octa, xpb
           
