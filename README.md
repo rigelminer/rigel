@@ -6,43 +6,38 @@ This is a cryptocurrency miner for Nvidia GPUs
 
 ## Supported algorithms
 
-| Algorithm   | Coin(s)                                 | Fee  |
-|-------------|-----------------------------------------|------|
-| abelian     | ABEL                                    | 1.0% |
-| alephium    | ALPH                                    | 0.7% |
-| autolykos2  | ERG<br/>BLOCX                           | 1.0% |
-| etchash     | ETC                                     | 0.7% |
-| ethash      | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
-| ethashb3    | HYP                                     | 1.0% |
-| fishhash    | IRON                                    | 1.0% |
-| karlsenhash | KLS<br/>NXL                             | 1.0% |
-| kawpow      | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
-| nexapow     | NEXA                                    | 2.0% |
-| octopus     | CFX                                     | 2.0% |
-| pyrinhash   | PYI                                     | 1.0% |
-| sha256ton   | GRAM                                    | 1.0% |
-| sha512256d  | RXD                                     | 1.0% |
-| xelishash   | XEL (pre-fork)                          | 3.0% |
-| xelishashv2 | XEL                                     | 2.0% |
-| zil         | ZIL                                     | 0%   |
+| Algorithm     | Coin(s)                                 | Fee  |
+|---------------|-----------------------------------------|------|
+| abelian       | ABEL                                    | 1.0% |
+| alephium      | ALPH                                    | 0.7% |
+| autolykos2    | ERG<br/>BLOCX                           | 1.0% |
+| etchash       | ETC                                     | 0.7% |
+| ethash        | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
+| ethashb3      | HYP                                     | 1.0% |
+| fishhash      | IRON                                    | 1.0% |
+| karlsenhash   | KLS (pre-fork)<br/>NXL                  | 1.0% |
+| karlsenhashv2 | KLS                                     | 1.0% |
+| kawpow        | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
+| nexapow       | NEXA                                    | 2.0% |
+| octopus       | CFX                                     | 2.0% |
+| pyrinhash     | PYI (pre-fork)                          | 1.0% |
+| pyrinhashv2   | PYI                                     | 1.0% |
+| sha256ton     | GRAM                                    | 1.0% |
+| sha512256d    | RXD                                     | 1.0% |
+| xelishash     | XEL (pre-fork)                          | 3.0% |
+| xelishashv2   | XEL                                     | 2.0% |
+| zil           | ZIL                                     | 0%   |
 
 ### Dual mining
 
-* (abelian/autolykos2/etchash/ethash/ethashb3)+alephium
-* (abelian/autolykos2/etchash/ethash/ethashb3)+karlsenhash
-* (abelian/autolykos2/etchash/ethash/ethashb3)+pyrinhash
-* (abelian/autolykos2/etchash/ethash/ethashb3)+sha256ton
-* (abelian/autolykos2/etchash/ethash/ethashb3)+sha512256d
-* fishhash+alephium
-* fishhash+karlsenhash
-* fishhash+pyrinhash
-* fishhash+sha256ton
-* fishhash+sha512256d
-* octopus+alephium
-* octopus+karlsenhash
-* octopus+pyrinhash
-* octopus+sha256ton
-* octopus+sha512256d
+* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+alephium
+* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+karlsenhash
+* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+pyrinhash
+* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+pyrinhashv2
+* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+sha256ton
+* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+sha512256d
+* karlsenhashv2+pyrinhashv2
+* karlsenhashv2+sha256ton
 * any single or dual algorithm combination + zil
 
 ## Features
@@ -62,26 +57,27 @@ This is a cryptocurrency miner for Nvidia GPUs
           Selects the mining algorithm
           
           Currently supported:
-          abelian     (ABEL)
-          alephium    (ALPH)
-          autolykos2  (ERG, BLOCX)
-          etchash     (ETC)
-          ethash      (ETHW, XPB, OCTA, etc.)
-          ethashb3    (HYP)
-          fishhash    (IRON)
-          karlsenhash (KLS)
-          kawpow      (RVN, AIPG, XNA, CLORE, NEOX, etc.)
-          nexapow     (NEXA)
-          octopus     (CFX)
-          pyrinhash   (PYI)
-          sha256ton   (GRAM)
-          sha512256d  (RXD)
-          xelishash   (pre-fork XEL)
-          xelishashv2 (XEL)
-          zil         (ZIL)
+          abelian       (ABEL)
+          alephium      (ALPH)
+          autolykos2    (ERG, BLOCX)
+          etchash       (ETC)
+          ethash        (ETHW, XPB, OCTA, etc.)
+          ethashb3      (HYP)
+          fishhash      (IRON)
+          karlsenhash   (pre-fork KLS, NXL)
+          karlsenhashv2 (KLS)
+          kawpow        (RVN, AIPG, XNA, CLORE, NEOX, etc.)
+          nexapow       (NEXA)
+          octopus       (CFX)
+          pyrinhash     (PYI)
+          sha256ton     (GRAM)
+          sha512256d    (RXD)
+          xelishash     (pre-fork XEL)
+          xelishashv2   (XEL)
+          zil           (ZIL)
           
           To dual or triple mine pass the algorithm list
-          separated by `+`, e.g. `ethash+karlsenhash+zil`
+          separated by `+`, e.g. `autolykos2+sha256ton+zil`
 
       --a1 <ALGORITHM>
           Sets the primary algorithm (alternative to `-a`)
