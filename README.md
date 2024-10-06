@@ -250,12 +250,12 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           Examples:
           --temp-limit tc[60-70]
-              stops the GPU when its core temperature reaches 70 degrees celsius
+              stops the GPU when its core temperature reaches 70 degrees Celsius
               and resumes mining when it cools down to 60 degrees
           
           --temp-limit tm[105-115]
-              stops the GPU when its memory temperature reaches 115 degrees celsius
-              and resumes mining when it cools down to 60 degrees
+              stops the GPU when its memory temperature reaches 115 degrees Celsius
+              and resumes mining when it cools down to 105 degrees
           
           --temp-limit tc[60-70]tm[105-115]
               enables both core and memory temperature limits
