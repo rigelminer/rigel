@@ -22,6 +22,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | octopus       | CFX                                     | 2.0% |
 | pyrinhash     | PYI (pre-fork)                          | 1.0% |
 | pyrinhashv2   | PYI                                     | 1.0% |
+| quai          | QUAI                                    | 1.0% |
 | sha256ton     | GRAM                                    | 1.0% |
 | sha512256d    | RXD                                     | 1.0% |
 | xelishash     | XEL (pre-fork)                          | 3.0% |
@@ -70,6 +71,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           nexapow       (NEXA)
           octopus       (CFX)
           pyrinhash     (PYI)
+          quai          (QUAI)
           sha256ton     (GRAM)
           sha512256d    (RXD)
           xelishash     (pre-fork XEL)
