@@ -20,6 +20,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | kawpow        | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
 | nexapow       | NEXA                                    | 2.0% |
 | octopus       | CFX                                     | 2.0% |
+| progpowz      | ZANO                                    | 1.0% |
 | pyrinhash     | PYI (pre-fork)                          | 1.0% |
 | pyrinhashv2   | PYI                                     | 1.0% |
 | quai          | QUAI                                    | 1.0% |
@@ -70,6 +71,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           kawpow        (RVN, AIPG, XNA, CLORE, NEOX, etc.)
           nexapow       (NEXA)
           octopus       (CFX)
+          progpowz      (ZANO)
           pyrinhash     (PYI)
           quai          (QUAI)
           sha256ton     (GRAM)
