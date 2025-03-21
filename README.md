@@ -15,14 +15,11 @@ This is a cryptocurrency miner for Nvidia GPUs
 | ethash        | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
 | ethashb3      | HYP                                     | 1.0% |
 | fishhash      | IRON                                    | 1.0% |
-| karlsenhash   | KLS (pre-fork)<br/>NXL                  | 1.0% |
 | karlsenhashv2 | KLS                                     | 1.0% |
 | kawpow        | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
 | nexapow       | NEXA                                    | 2.0% |
 | octopus       | CFX                                     | 2.0% |
 | progpowz      | ZANO                                    | 1.0% |
-| pyrinhash     | PYI (pre-fork)                          | 1.0% |
-| pyrinhashv2   | PYI                                     | 1.0% |
 | quai          | QUAI                                    | 1.0% |
 | sha256ton     | GRAM                                    | 1.0% |
 | sha512256d    | RXD                                     | 1.0% |
@@ -33,12 +30,8 @@ This is a cryptocurrency miner for Nvidia GPUs
 ### Dual mining
 
 * (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+alephium
-* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+karlsenhash
-* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+pyrinhash
-* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+pyrinhashv2
 * (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+sha256ton
 * (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+sha512256d
-* karlsenhashv2+pyrinhashv2
 * karlsenhashv2+sha256ton
 * any single or dual algorithm combination + zil
 
@@ -606,3 +599,5 @@ This is a cryptocurrency miner for Nvidia GPUs
 
 Discord: https://discord.gg/zKTgcGgc6k  
 BitcoinTalk: https://bitcointalk.org/index.php?topic=5424675.0
+
+Official website: https://rigelminer.com
