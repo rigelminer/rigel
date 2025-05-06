@@ -10,7 +10,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 |---------------|-----------------------------------------|------|
 | abelian       | ABEL                                    | 1.0% |
 | alephium      | ALPH                                    | 0.7% |
-| autolykos2    | ERG<br/>BLOCX                           | 1.0% |
+| autolykos2    | ERG                                     | 1.0% |
 | etchash       | ETC                                     | 0.7% |
 | ethash        | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
 | ethashb3      | HYP                                     | 1.0% |
@@ -54,18 +54,16 @@ This is a cryptocurrency miner for Nvidia GPUs
           Currently supported:
           abelian       (ABEL)
           alephium      (ALPH)
-          autolykos2    (ERG, BLOCX)
+          autolykos2    (ERG)
           etchash       (ETC)
           ethash        (ETHW, XPB, OCTA, etc.)
           ethashb3      (HYP)
           fishhash      (IRON)
-          karlsenhash   (pre-fork KLS, NXL)
           karlsenhashv2 (KLS)
           kawpow        (RVN, AIPG, XNA, CLORE, NEOX, etc.)
           nexapow       (NEXA)
           octopus       (CFX)
           progpowz      (ZANO)
-          pyrinhash     (PYI)
           quai          (QUAI)
           sha256ton     (GRAM)
           sha512256d    (RXD)
@@ -96,7 +94,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           and the up-to-date list is maintained on the project's webpage.
           
           Supported coins (the list is not exhaustive):
-          `autolykos2`: erg, blocx
+          `autolykos2`: erg
           `kawpow`: aipg, clore, neox, xna, rvn
           `ethash`: ethw, octa, xpb
           
