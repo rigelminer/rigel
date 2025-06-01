@@ -30,10 +30,17 @@ This is a cryptocurrency miner for Nvidia GPUs
 
 ### Dual mining
 
-* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+alephium
-* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+sha256ton
-* (abelian/autolykos2/ethash/ethash/ethashb3/fishhash/octopus)+sha512256d
-* karlsenhashv2+sha256ton
+|                   | +alephium | +sha256ton | +sha3x | +sha512256d |
+|-------------------|:---------:|:----------:|:------:|:-----------:|
+| **abelian**       |     X     |     X      |   X    |      X      |
+| **autolykos2**    |     X     |     X      |   X    |      X      |
+| **ethash**        |     X     |     X      |        |      X      |
+| **etchash**       |     X     |     X      |        |      X      |
+| **ethashb3**      |     X     |     X      |        |      X      |
+| **fishhash**      |     X     |     X      |   X    |      X      |
+| **karlsenhashv2** |           |     X      |   X    |             |
+| **octopus**       |     X     |     X      |   X    |      X      |
+
 * any single or dual algorithm combination + zil
 
 ## Features
