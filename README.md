@@ -22,6 +22,7 @@ This is a cryptocurrency miner for Nvidia GPUs
 | progpowz      | ZANO                                    | 1.0% |
 | quai          | QUAI                                    | 1.0% |
 | sha256ton     | GRAM                                    | 1.0% |
+| sha3x         | XTM                                     | 1.0% |
 | sha512256d    | RXD                                     | 1.0% |
 | xelishash     | XEL (pre-fork)                          | 3.0% |
 | xelishashv2   | XEL                                     | 2.0% |
@@ -66,6 +67,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           progpowz      (ZANO)
           quai          (QUAI)
           sha256ton     (GRAM)
+          sha3x         (XTM)
           sha512256d    (RXD)
           xelishash     (pre-fork XEL)
           xelishashv2   (XEL)
