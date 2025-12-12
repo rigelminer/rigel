@@ -6,27 +6,27 @@ This is a cryptocurrency miner for Nvidia GPUs
 
 ## Supported algorithms
 
-| Algorithm     | Coin(s)                                 | Fee  |
-|---------------|-----------------------------------------|------|
-| abelian       | ABEL                                    | 1.0% |
-| alephium      | ALPH                                    | 0.7% |
-| autolykos2    | ERG                                     | 1.0% |
-| etchash       | ETC                                     | 0.7% |
-| ethash        | ETHW<br/>XPB<br/>OCTA                   | 0.7% |
-| ethashb3      | HYP                                     | 1.0% |
-| fishhash      | IRON                                    | 1.0% |
-| karlsenhashv2 | KLS                                     | 1.0% |
-| kawpow        | RVN<br/>AIPG<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
-| nexapow       | NEXA                                    | 2.0% |
-| octopus       | CFX                                     | 2.0% |
-| progpowz      | ZANO                                    | 1.0% |
-| quai          | QUAI                                    | 1.0% |
-| sha256ton     | GRAM                                    | 1.0% |
-| sha3x         | XTM                                     | 1.0% |
-| sha512256d    | RXD                                     | 1.0% |
-| xelishash     | XEL (pre-fork)                          | 3.0% |
-| xelishashv2   | XEL                                     | 2.0% |
-| zil           | ZIL                                     | 0%   |
+| Algorithm     | Coin(s)                        | Fee  |
+|---------------|--------------------------------|------|
+| abelian       | ABEL                           | 1.0% |
+| alephium      | ALPH                           | 0.7% |
+| autolykos2    | ERG                            | 1.0% |
+| etchash       | ETC                            | 0.7% |
+| ethash        | ETHW<br/>XPB<br/>OCTA          | 0.7% |
+| ethashb3      | HYP                            | 1.0% |
+| fishhash      | IRON                           | 1.0% |
+| karlsenhashv2 | KLS                            | 1.0% |
+| kawpow        | RVN<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
+| nexapow       | NEXA                           | 2.0% |
+| octopus       | CFX                            | 2.0% |
+| progpowz      | ZANO                           | 1.0% |
+| quai          | QUAI                           | 1.0% |
+| sha256ton     | GRAM                           | 1.0% |
+| sha3x         | XTM                            | 1.0% |
+| sha512256d    | RXD                            | 1.0% |
+| xelishashv2   | XEL (pre-fork)                 | 2.0% |
+| xelishashv3   | XEL                            | 2.0% |
+| zil           | ZIL                            | 0%   |
 
 ### Dual mining
 
@@ -68,7 +68,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           ethashb3      (HYP)
           fishhash      (IRON)
           karlsenhashv2 (KLS)
-          kawpow        (RVN, AIPG, XNA, CLORE, NEOX, etc.)
+          kawpow        (RVN, XNA, CLORE, NEOX, etc.)
           nexapow       (NEXA)
           octopus       (CFX)
           progpowz      (ZANO)
@@ -76,8 +76,8 @@ This is a cryptocurrency miner for Nvidia GPUs
           sha256ton     (GRAM)
           sha3x         (XTM)
           sha512256d    (RXD)
-          xelishash     (pre-fork XEL)
-          xelishashv2   (XEL)
+          xelishashv2   (pre-fork XEL)
+          xelishashv3   (XEL)
           zil           (ZIL)
           
           To dual or triple mine pass the algorithm list
