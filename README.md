@@ -6,27 +6,25 @@ This is a cryptocurrency miner for Nvidia GPUs
 
 ## Supported algorithms
 
-| Algorithm     | Coin(s)                        | Fee  |
-|---------------|--------------------------------|------|
-| abelian       | ABEL                           | 1.0% |
-| alephium      | ALPH                           | 0.7% |
-| autolykos2    | ERG                            | 1.0% |
-| etchash       | ETC                            | 0.7% |
-| ethash        | ETHW<br/>XPB<br/>OCTA          | 0.7% |
-| ethashb3      | HYP                            | 1.0% |
-| fishhash      | IRON                           | 1.0% |
-| karlsenhashv2 | KLS                            | 1.0% |
-| kawpow        | RVN<br/>XNA<br/>CLORE<br/>NEOX | 1.0% |
-| nexapow       | NEXA                           | 2.0% |
-| octopus       | CFX                            | 2.0% |
-| progpowz      | ZANO                           | 1.0% |
-| quai          | QUAI                           | 1.0% |
-| sha256ton     | GRAM                           | 1.0% |
-| sha3x         | XTM                            | 1.0% |
-| sha512256d    | RXD                            | 1.0% |
-| xelishashv2   | XEL (pre-fork)                 | 2.0% |
-| xelishashv3   | XEL                            | 2.0% |
-| zil           | ZIL                            | 0%   |
+| Algorithm     | Coin(s)                       | Fee  |
+|---------------|-------------------------------|------|
+| abelian       | ABEL                          | 1.0% |
+| alephium      | ALPH                          | 0.7% |
+| autolykos2    | ERG                           | 1.0% |
+| etchash       | ETC                           | 0.7% |
+| ethash        | ETHW<br/>XPB<br/>OCTA         | 0.7% |
+| ethashb3      | HYP                           | 1.0% |
+| fishhash      | IRON                          | 1.0% |
+| karlsenhashv2 | KLS                           | 1.0% |
+| kawpow        | RVN<br/>XNA<br/>QUAI<br/>NEOX | 1.0% |
+| nexapow       | NEXA                          | 2.0% |
+| octopus       | CFX                           | 2.0% |
+| progpowz      | ZANO                          | 1.0% |
+| sha256ton     | GRAM                          | 1.0% |
+| sha3x         | XTM                           | 1.0% |
+| sha512256d    | RXD                           | 1.0% |
+| xelishashv3   | XEL                           | 2.0% |
+| zil           | ZIL                           | 0%   |
 
 ### Dual mining
 
@@ -68,15 +66,13 @@ This is a cryptocurrency miner for Nvidia GPUs
           ethashb3      (HYP)
           fishhash      (IRON)
           karlsenhashv2 (KLS)
-          kawpow        (RVN, XNA, CLORE, NEOX, etc.)
+          kawpow        (RVN, QUAI, XNA, NEOX, etc.)
           nexapow       (NEXA)
           octopus       (CFX)
           progpowz      (ZANO)
-          quai          (QUAI)
           sha256ton     (GRAM)
           sha3x         (XTM)
           sha512256d    (RXD)
-          xelishashv2   (pre-fork XEL)
           xelishashv3   (XEL)
           zil           (ZIL)
           
@@ -104,7 +100,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           Supported coins (the list is not exhaustive):
           `autolykos2`: erg
-          `kawpow`: aipg, clore, neox, xna, rvn
+          `kawpow`: rvn, quai, xna, neox
           `ethash`: ethw, octa, xpb
           
           When dual or triple mining the value should be prepended with
@@ -112,8 +108,8 @@ This is a cryptocurrency miner for Nvidia GPUs
           
           Examples:
           --coin rvn
-          --coin aipg
-          --coin [1]octa
+          --coin quai
+          --coin [1]ethw
 
   -o, --url <URL>
           Sets the pool URL
@@ -126,7 +122,7 @@ This is a cryptocurrency miner for Nvidia GPUs
               ethproxy
               ethstratum
               zmp (zil only)
-              solo (xelishash only)
+              solo (xelishashv3 only)
           Transport protocols: tcp, ssl
           
           When dual or triple mining the value should be prepended with
@@ -205,7 +201,7 @@ This is a cryptocurrency miner for Nvidia GPUs
           Sets tuning values for selected algorithm(s)
           
           Supported algorithms:
-              xelishash
+              None at the moment
           
           Comma-separated list of values can be used to set values per-GPU
           To skip a GPU, set the corresponding value to underscore `_`.
