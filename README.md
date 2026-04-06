@@ -13,7 +13,6 @@ This is a cryptocurrency miner for Nvidia GPUs
 | autolykos2    | ERG                           | 1.0% |
 | etchash       | ETC                           | 0.7% |
 | ethash        | ETHW<br/>XPB<br/>OCTA         | 0.7% |
-| ethashb3      | HYP                           | 1.0% |
 | fishhash      | IRON                          | 1.0% |
 | karlsenhashv2 | KLS                           | 1.0% |
 | kawpow        | RVN<br/>XNA<br/>QUAI<br/>NEOX | 1.0% |
@@ -34,7 +33,6 @@ This is a cryptocurrency miner for Nvidia GPUs
 | **autolykos2**    |     X     |     X      |   X    |      X      |
 | **ethash**        |     X     |     X      |        |      X      |
 | **etchash**       |     X     |     X      |        |      X      |
-| **ethashb3**      |     X     |     X      |        |      X      |
 | **fishhash**      |     X     |     X      |   X    |      X      |
 | **karlsenhashv2** |           |     X      |   X    |             |
 | **octopus**       |     X     |     X      |   X    |      X      |
@@ -63,7 +61,6 @@ This is a cryptocurrency miner for Nvidia GPUs
           autolykos2    (ERG)
           etchash       (ETC)
           ethash        (ETHW, XPB, OCTA, etc.)
-          ethashb3      (HYP)
           fishhash      (IRON)
           karlsenhashv2 (KLS)
           kawpow        (RVN, QUAI, XNA, NEOX, etc.)
